@@ -1,5 +1,5 @@
 
-## Finalmente conclui 
+## Concluido :D
 <p>Finalmente eu conclui, sério, foram  05 dias me dedicando 100% ao projeto, na chuva (milagre), no sol, nas montanhas, eu realmente me debrucei, por ser meu primeiro sistema mais "Completo" eu quis dar o meu melhor, mas mesmo assim, tem algumas falahas<p>
 
 ## O projeto:
