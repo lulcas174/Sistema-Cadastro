@@ -24,6 +24,7 @@ Não mais, algumas dicas para rodar o projeto:
 Se você observar no meu controller "administradorController" eu tenho uma função verificar, nela eu faço os ifs de cada usuario, eu pego essas informações no banco do user que o administrador cadastrou
 Você consegue fazer tudo isso pelo formulario de cadastro.
 <h4> Os tipos de usuarios:</h4>
+
 <p> Usuario administrador, pode fazer tudo no sistema, inclusive cadastrar novos usuarios</p>
 <p> Usuario Editor, pode fazer o crud de nova empresa e adicionar endereços e etc</p>
 <p> Usuario visualizador, só pode olhar o que já foi criado </p>
@@ -39,3 +40,6 @@ Você consegue fazer tudo isso pelo formulario de cadastro.
  (antes desse, verifica o .env example, você pode usar ele como .env normal, muda o nome da db e tals)
 <p>-php artisan migrate:fresh --seed</p>
 Pronto, estará pronto para utilizar e editar
+<hr>
+<p>A forma que eu modelei o banco</p>
+<img src=”https://cdn.discordapp.com/attachments/828666736596877323/832069191850524732/unknown.png”>
