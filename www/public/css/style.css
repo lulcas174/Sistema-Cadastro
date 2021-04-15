@@ -1,0 +1,86 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.form-container {
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-top: 200px;
+}
+
+.botao {
+    display:flex;
+    justify-content:space-between;
+}
+
+.botao-login {
+    display:flex;
+    justify-content:flex-end;
+}
+
+.form-container-registro {
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.tabela-estilo {
+    margin:20px;
+}
+
+.formulario_administrador {
+    padding-top: 200px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.botao-administrador {
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.texto_inicio {
+    max-width: 100%;
+    align-items: center;
+    display: flex;
+    margin: 5px auto;
+}
+
+
+/* Referente ao dash board*/
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.enderecoAdicionar_botao{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.endereco_voltar {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Icone */
+.fa-door-open {
+    font-size: xx-large;
+    color: black;
+}

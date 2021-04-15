@@ -1,0 +1,61 @@
+version: "3.1"
+services:
+
+    mysql:
+      image: mysql:5.7
+      container_name: analistaJr-db
+      command: mysqld --innodb-flush-method=fsync
+      environment:
+        - MYSQL_ROOT_PASSWORD=nDLvUCNscWDqDIAY
+        - MYSQL_DATABASE=analista_jr
+        - MYSQL_USER=analistaJr
+        - MYSQL_PASSWORD=123456
+      volumes:
+        - ./docker/mysql/my.cnf:/etc/mysql/conf.d/custom.cnf
+        - ./docker/mysql/data:/var/lib/mysql
+
+    redis:
+      image: redis:alpine
+      container_name: analistaJr-cache
+      command: redis-server --appendonly yes --requirepass 1jA4cCYB
+      environment:
+        - REDIS_PORT=6379
+      volumes:
+        - ./docker/redis/data:/data
+
+    php-fpm:
+      build: docker/php-fpm
+      container_name: analistaJr-php
+      working_dir: /application
+      volumes:
+        - ./www:/application
+        # - ./vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64:/usr/bin/wkhtmltopdf
+        - ./docker/php-fpm/php-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
+      links:
+        - mysql:analistaJr-db
+        - redis:analistaJr-cache
+
+    nginx:
+      image: nginx:alpine
+      container_name: analistaJr-http
+      working_dir: /application
+      volumes:
+          - ./www:/application
+#          - ./vendor/h4cc/wkhtmltoimage-amd64/bin:/usr/bin
+          - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+          - ./docker/nginx/fastcgi_params:/etc/nginx/fastcgi_params
+      ports:
+        - "8888:80"
+      links:
+        - php-fpm:analistaJr-php
+
+    phpmyadmin:
+      image: phpmyadmin/phpmyadmin:latest
+      container_name: analistaJr-phpmyadmin
+      environment:
+        PMA_HOST: analistaJr-db
+        PMA_PORT: 3306
+      ports:
+        - '8050:80'
+      volumes:
+        - /sessions
