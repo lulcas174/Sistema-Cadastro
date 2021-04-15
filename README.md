@@ -31,3 +31,11 @@ Você consegue fazer tudo isso pelo formulario de cadastro.
 <hr>
 
 <p>O resto do projeto é um crud, se alguém tiver achado alguma falha, não deixa de entrar em contato comigo<p>
+
+
+
+<p> o life hack caso você não tenha o docker, é só tirar o arquivo laravel da pasta, colocar em outra e dar um 
+-composer update --no-scripts
+ (antes desse, verifica o .env example, você pode usar ele como .env normal, muda o nome da db e tals)
+-php artisan migrate:fresh --seed
+Pronto, estará pronto para utilizar e editar
