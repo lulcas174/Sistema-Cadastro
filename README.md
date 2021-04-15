@@ -1,7 +1,7 @@
 
 ## Concluido :D
 <p>Finalmente eu conclui, sério, foram  05 dias me dedicando 100% ao projeto, na chuva (milagre), no sol, nas montanhas, eu realmente me debrucei, por ser meu primeiro sistema mais "Completo" eu quis dar o meu melhor, mas mesmo assim, tem algumas falahas<p>
-
+<p>Por favor, antes de tudo, quando for para o projeto, quando ele estiver na maquina, tem que dar um php artisan migrate:fresh --seed, isso vai fazer a migração para o banco e adicionar a seed <br>
 ## O projeto:
 <h4> Eu fui desafiado a realizar o seguinte projeto:</h4>
 <p> Uma empresa de distribuição de alimentos precisa de um sistema interno para gerenciar seus clientes e endereços de entrega.
@@ -10,7 +10,7 @@ O cadastro será interno e deve ser restrito a usuários logados com login e sen
 <h5>Para alguém que é de um nível acima do meu, com certeza acharia o projeto simples, eu de cara também achei algo simples, até começar a fazer, foi um projeto muito divertio <strong>MESMO</strong></h5>
 Não mais, algumas dicas para rodar o projeto:
 <h3>-Você precisa subir os containers do docker (precisa ter na sua maquina, se não tiver, vou ensinar um "life-hack") </h3>
-    ->Para subir é muito simples, só dar um docker-compose up -d (PELO AMOR DE DEUS, PARA A MÁGICA DO MEU SISTEMA FUNCIONAR, ASSIM QUE SUBIR O DOCKER, VOCÊ PRECISA DA UM PHP ARTISAN MIGRATE:FRESH --SEED)
+    ->Para subir é muito simples, só dar um docker-compose up -d 
  <h3>Com o docker up, vamos para os primeiros passos:</h3>
 <p> Então, na minha seed, eu criei um usuario admin padrão com meu nome(lucasAdmin) A senha desse usuario vai ser admin</p>
 <p> Vale sempre lembrar, tudo pode ser alterado no seed, caso você tenha dado o migrate:fresh com o seed, é só rodar esse mesmo comando que ele atualiza 😏</p>
