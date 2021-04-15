@@ -9,7 +9,7 @@
 O cadastro será interno e deve ser restrito a usuários logados com login e senha. O cadastro do cliente deve conter Nome Empresa, CNPJ, Telefone, Nome do Responsável, Email e Endereço(Cep, Logradouro, Bairro, Complemento, Número, Cidade, Estado).</p>
 <h5>Para alguém que é de um nível acima do meu, com certeza acharia o projeto simples, eu de cara também achei algo simples, até começar a fazer, foi um projeto muito divertido, <strong>MESMO</strong></h5>
 Não mais, algumas dicas para rodar o projeto:
-<h3>-Você precisa subir os containers do docker (precisa ter na sua maquina, se não tiver, vou ensinar um "life-hack") </h3>
+<h3>-Você precisa subir os containers do docker</h3> (precisa ter na sua maquina, se não tiver, vou ensinar um "life-hack", no final) <br> 
     ->Para subir é muito simples, só dar um docker-compose up -d 
  <h3>Com o docker up, vamos para os primeiros passos:</h3>
 <p> Então, na minha seed, eu criei um usuario admin padrão com meu nome(lucasAdmin) A senha desse usuario vai ser admin</p>
